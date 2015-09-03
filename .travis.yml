@@ -1,16 +1,18 @@
+#
+# see: http://harshjv.github.io/blog/setup-latex-pdf-build-using-travis-ci/
+#
 before_install:
 - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended"
 script:
 - mkdir _build
-- pdflatex -output-directory _build tex/your_file_1.tex
-- pdflatex -output-directory _build tex/your_file_2.tex
+- pdflatex -output-directory _build fragen_an_einen_knappen.tex
+- pdflatex -output-directory _build fragen_an_einen_kanppen.tex
 deploy:
   provider: releases
   api_key:
-    secure: [YOUR KEY]
-  file:
-  - _build/your_file_1.pdf
-  - _build/your_file_2.pdf
+    secure: AoJjOZhFumXCb5+HmtsUUbKDe55Y7I02EbQIOaAdaR9umtjSZfdhL7n8Q5opEqmj7lnkboSJtvq1anwpffSRlr5Mz9flD7W6sfO5guCHc42jETzxA0zTgmDg88wVc9nM0Jw/9Ttl6xIywbzM/w3jhPWY43wkMfW044/Ijw5f3A9rRmGnPT6K/n0MFvWZIHbNpj6Vjvpesk/GZr9HIa6FgsxTRVeM3UijDSz7ujZn8p6Adb/VKEJGSqU9+0j5/e9+tJZyHmTPh16ZNarEkwzugu1YYEnUZu7rUbnpIobKno55hhVbroBfx2/ua91GzO1m+kzqIBSfklzm7N+31oEcnKj8N1BXyRpJ6GvCp5WRSfVVDrJ/mKAaS2bWPowrRmwSWlECb8ixRhElpm75naKqCgbtyaVJ+2uvymploMaKJmZJXHEUJ48P3ItgOsUDZtyB3udf8fOsYlX1TtNegRJSpBmrauxYgNnZ2pJ+/UdPmxLdLKKvlYpaEcdIKdD+4//CYqQpSyxSIeKI6bHYfkB9XSSdjtkzQDOgF0HuuNXV8TGyvNvdvJaTsyne3CvadLNAcFIV6c0eQsJKj2/Qv5z83cju09Ce7ZXZIa9qRAHclQ+nctJUWjYvDjuqRlKvRUUEJaX4fmp8kIH2TugXy6LK9+7EYEfVp41tKSCbBolM66Q=
+  file: _build/fragen_an_einen_knappen.pdf
   skip_cleanup: true
   on:
+    repo: cypherfox/fragen_an_einen_knappen
     tags: true
