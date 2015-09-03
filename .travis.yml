@@ -6,7 +6,7 @@ before_install:
 script:
 - mkdir _build
 - pdflatex -output-directory _build fragen_an_einen_knappen.tex
-- pdflatex -output-directory _build fragen_an_einen_kanppen.tex
+- pdflatex -output-directory _build fragen_an_einen_knappen.tex
 deploy:
   provider: releases
   api_key:
