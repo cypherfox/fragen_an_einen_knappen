@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Thu Sep 03 08:29:40 CEST 2015
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=fragen_an_einen_knappen.tex
+outputFile=fragen_an_einen_knappen.pdf
+langSpell=en
+markDer=true
+srcDir=
